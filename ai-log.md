@@ -34,3 +34,21 @@ Zonder hover zag je niet goed dat je ergens op kon klikken.
 - Verwacht: "Webshop Theme" met screenshot in de lijst, homepage met hero en drie kaarten
 - Resultaat: klopt, hover werkt ook
 - Fouten: geen
+
+## Les 3
+
+**Wat heb ik gedaan**
+- `functions.php` gemaakt. De css en js worden nu geladen met `wp_enqueue_style()` en `wp_enqueue_script()` in plaats van een `<link>` tag.
+- `add_theme_support( 'post-thumbnails' )` toegevoegd. Hierdoor krijg je bij pagina's en berichten het vak "Uitgelichte afbeelding" in de editor. Die kan ik later gebruiken voor productfoto's.
+- `front-page.php` en `page.php` gemaakt, allebei met een testkop bovenaan zodat je ziet welke template gebruikt wordt.
+
+**Template hierarchy**
+- Homepage (statische voorpagina): WordPress zoekt eerst `front-page.php`, dan `home.php` / `page.php`, en als laatste `index.php`.
+- Gewone pagina: `page-{slug}.php`, `page-{id}.php`, `page.php`, `singular.php`, `index.php`.
+- `index.php` is dus altijd de fallback.
+
+**Test**
+- Getest: pagina's "Home" en "Over ons" aangemaakt, Home ingesteld als voorpagina (Instellingen > Lezen)
+- Verwacht: home toont "Template: front-page.php", over ons toont "Template: page.php"
+- Resultaat: klopt. In de broncode staan `webshop-style-css` en `webshop-script-js`, dus enqueueing werkt. In de console staat "Webshop theme geladen".
+- Fouten: geen

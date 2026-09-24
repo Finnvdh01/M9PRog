@@ -7,9 +7,11 @@
 </head>
 <body>
 
-<main>
-    <h1>index.php</h1>
-    <p>Dit is de fallback template.</p>
+<p class="test-kop">Template: page.php</p>
+
+<main class="page-content">
+    <h1>Pagina</h1>
+    <p>Hier komt later de content van de pagina.</p>
 </main>
 
 <?php wp_footer(); ?>
