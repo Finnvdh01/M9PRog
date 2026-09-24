@@ -15,4 +15,22 @@ en via een volume gekoppeld aan wp-content/themes.
 - Getest: `docker compose up -d` en daarna localhost:8080 en localhost:8082
 - Verwacht: WordPress installatie scherm en phpMyAdmin login
 - Resultaat: werkt, alle drie containers draaien (`docker compose ps`)
-- Fout: eerst vergeten `.env` aan te maken, database kon niet verbinden. Opgelost door `.env.example` te kopieren.
+- Fout: phpMyAdmin startte niet, poort 8081 was al in gebruik op mijn pc. Opgelost door phpMyAdmin op poort 8082 te zetten.
+- Ook Docker Desktop stond nog niet aan, eerst opgestart.
+
+## Les 2
+
+**AI output bekeken**
+- `style.css`: snap ik, maar de theme header was niet compleet (geen versie, text domain en auteur). Aangevuld.
+- `index.php`: is gewoon een HTML pagina. Werkt, maar mist nog `wp_head()` en haalt niks uit WordPress. Moet later vervangen worden.
+- De stylesheet wordt met een `<link>` tag ingeladen, dat moet volgens mij via functions.php (les 3).
+
+**Eigen aanpassing**
+Hover effect toegevoegd op de knoppen (wordt zwart) en op de productkaarten (oranje rand).
+Zonder hover zag je niet goed dat je ergens op kon klikken.
+
+**Test**
+- Getest: theme activeren via Weergave > Thema's en homepage bekijken
+- Verwacht: "Webshop Theme" met screenshot in de lijst, homepage met hero en drie kaarten
+- Resultaat: klopt, hover werkt ook
+- Fouten: geen

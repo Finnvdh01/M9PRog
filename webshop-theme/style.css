@@ -1,0 +1,75 @@
+/*
+Theme Name: Webshop Theme
+Theme URI: https://github.com/Finnvdh01/M9PRog
+Author: Finn van der Heide
+Description: Eigen theme voor een kleine sneaker webshop. Gemaakt voor M9PROG.
+Version: 1.0
+Requires at least: 6.0
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+Text Domain: webshop-theme
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111;
+    color: #fff;
+}
+
+.site-header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    padding: 80px 40px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff6b00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+/* eigen aanpassing: hover op knop en kaart */
+.btn:hover {
+    background: #111;
+}
+
+.product-card:hover {
+    border-color: #ff6b00;
+}
